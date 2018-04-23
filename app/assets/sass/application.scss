@@ -1,0 +1,337 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.preview {
+  border: 1px solid $border-colour;
+  max-width: 800px;
+  padding: $gutter/2;
+}
+
+
+
+// Grey bar top nav
+.global-nav {
+  background-color: $grey-3;
+  overflow: hidden;
+}
+
+  .global-nav-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .global-nav ul li {
+    float: left;
+    margin: 0;
+  }
+
+    .global-nav ul li a {
+      display: inline-block;
+      padding: 15px;
+      text-decoration: none;
+      color: $text-colour;
+      margin-right: none;
+      margin-left: 0;
+    }
+
+    .global-nav ul li a:hover {
+      background-color: $highlight-colour;
+    }
+
+    .global-nav ul li.active a,
+    .global-nav ul li.active a:hover {
+      background-color: $govuk-blue;
+      font-weight: bold;
+      color: #fff;
+    }
+
+
+
+
+
+// Buttons
+.button-secondary {
+  @include button($grey-3);
+}
+.button-error {
+  @include button($error-colour);
+}
+.button-cancel {
+  display: inline-block;
+  padding: .526315em .789473em .263157em;
+}
+
+
+
+
+
+// Pagination
+.pagination-summary {
+  margin: 30px 0 0 0;
+}
+
+.pagination {
+  padding: 0;
+  margin: 0 -15px 30px -15px;
+}
+
+.pagination__item {
+  display: inline-block;
+  list-style: none;
+}
+.pagination__link {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+
+  &:hover {
+    background: $highlight-colour;
+  }
+
+  &.current {
+    color: $text-colour;
+    font-weight: 700;
+    border: none;
+    pointer-events: none;
+    cursor: default;
+
+    &:hover, &:focus {
+      color: $text-colour;
+      background: none;
+    }
+  }
+}
+
+
+
+
+
+// Pagination 2 next/previous
+.pub-c-pagination {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: -15px;
+  margin-right: -15px
+}
+
+.pub-c-pagination__list {
+  margin: 0;
+  padding: 0
+}
+
+.pub-c-pagination__list:after {
+  content: "";
+  display: block;
+  clear: both
+}
+
+.pub-c-pagination__item {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  float: left;
+  list-style: none;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  width: 50%
+}
+
+@media (min-width: 641px) {
+  .pub-c-pagination__item {
+    font-size:16px;
+    line-height: 1.25
+  }
+}
+
+.pub-c-pagination__link {
+  display: block;
+  padding: 15px;
+  text-decoration: none
+}
+
+.pub-c-pagination__link:visited {
+  color: #005ea5
+}
+
+.pub-c-pagination__link:hover,.pub-c-pagination__link:active {
+  background-color: #f8f8f8
+}
+
+.pub-c-pagination__link-title {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 1.1111111111;
+  display: block
+}
+
+@media (min-width: 641px) {
+  .pub-c-pagination__link-title {
+    font-size:27px;
+    line-height: 1.25
+  }
+}
+
+.pub-c-pagination__item--previous {
+  float: left;
+  text-align: left
+}
+
+@media (max-width: 640px) {
+  .pub-c-pagination__item--previous {
+    float:none;
+    width: 100%
+  }
+}
+
+.pub-c-pagination__item--next {
+  float: right;
+  text-align: right
+}
+
+@media (max-width: 640px) {
+  .pub-c-pagination__item--next {
+    float:none;
+    width: 100%
+  }
+}
+
+.pub-c-pagination__link-icon {
+  display: inline-block;
+  margin-bottom: 1px;
+  height: .482em;
+  width: .63em
+}
+
+.pub-c-pagination__link-label {
+  display: inline-block;
+  margin-top: 0.1em;
+  text-decoration: underline
+}
+
+
+
+
+
+// Tabs
+.tabs ul {
+  border-bottom: 1px solid $grey-2;
+  margin-bottom: 30px;
+}
+
+.tabs li {
+  display: inline-block;
+  padding: 15px 20px 10px;
+  border: 1px solid $grey-2;
+  background: $grey-3;
+
+  a {
+    font-weight: 700;
+    color: $link-colour;
+  }
+}
+
+.tabs li.active {
+  display: inline-block;
+  padding: 15px 20px;
+  border: 1px solid $grey-2;
+  border-bottom: 1px solid white;
+  margin-bottom: -1px;
+  background: white;
+
+  a {
+    color: $text-colour;
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+
+
+
+
+// contents
+.part-navigation-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #bfc1c3
+}
+
+.part-navigation {
+  margin-bottom: 0;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25
+}
+
+@media (min-width: 641px) {
+  .part-navigation {
+    font-size:19px;
+    line-height: 1.3157894737
+  }
+}
+
+@media (min-width: 641px) {
+  .part-navigation {
+    font-family:"nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.1428571429
+  }
+}
+
+@media (min-width: 641px) and (min-width: 641px) {
+  .part-navigation {
+    font-size:16px;
+    line-height: 1.25
+  }
+}
+
+.part-navigation li {
+  list-style: decimal;
+  margin-left: 1.5em;
+  padding-left: 0.3em
+}
+
+.part-navigation li a {
+  display: block
+}
