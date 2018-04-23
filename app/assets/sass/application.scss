@@ -92,6 +92,32 @@ $path: "/public/images/";
       font-weight: bold;
       color: #fff;
     }
+// Main nav - border bottom version
+.main-nav {
+  font-size: 16px;
+  border-bottom: 1px solid $border-colour;
+  @extend %contain-floats;
+}
+
+  .main-nav ul li {
+    float: left;
+  }
+
+    .main-nav ul li a {
+      display: block;
+      padding: 15px 15px 20px;
+      text-decoration: none;
+      color: $text-colour;
+    }
+
+    .main-nav ul li a:hover {
+      background-color: $highlight-colour;
+    }
+
+    .main-nav ul li.active a {
+      border-bottom: 5px solid $govuk-blue;
+      padding-bottom: 15px;
+    }
 
 
 
