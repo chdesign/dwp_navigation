@@ -7,34 +7,32 @@
   {% include "includes/global-nav.html" %}
 {% endblock %}
 {% block content %}
+  {% include "includes/breadcrumb.html" %}
+  {% include "includes/backlink.html" %}
 
-{% include "includes/breadcrumb.html" %}
-{% include "includes/backlink.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
+      <h1 class="heading-xlarge">
+        Examples of DWP navigation elements
+      </h1>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+      {% include "includes/contents.html" %}
 
-    <h1 class="heading-xlarge">
-      Examples of DWP navigation elements
-    </h1>
+      {% include "includes/tabs.html" %}
 
-    {% include "includes/contents.html" %}
+      {% include "includes/text-link.html" %}
 
-    {% include "includes/tabs.html" %}
+      {% include "includes/buttons.html" %}
 
-    {% include "includes/text-link.html" %}
+      {% include "includes/pagination.html" %}
+      {% include "includes/pagination-2.html" %}
 
-    {% include "includes/buttons.html" %}
-
-    {% include "includes/pagination.html" %}
-    {% include "includes/pagination-2.html" %}
-
+    </div>
+    <div class="column-one-third">
+      {% include "includes/aside.html" %}
+    </div>
   </div>
-  <div class="column-one-third">
-    {% include "includes/aside.html" %}
-  </div>
-</div>
 {% endblock %}
 
 {% block footer_support_links %}
